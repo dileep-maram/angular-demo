@@ -1,0 +1,15 @@
+<div class="container">
+  <header>
+   <ul>
+    <li routerLink="home"><a routerLinkActive="active" >Home</a></li>
+    <li routerLink="Signup"><a routerLinkActive="active" >SignUp</a></li>
+    <li routerLink="Signin"><a routerLinkActive="active" >Signin</a></li>
+    <li routerLink="contactUs"><a routerLinkActive="active" >Contact Us</a></li>
+   </ul>
+  </header>
+  <section>
+    <app-section-child [mainTitle]="title"></app-section-child>
+   <router-outlet></router-outlet>
+  </section>
+
+</div>

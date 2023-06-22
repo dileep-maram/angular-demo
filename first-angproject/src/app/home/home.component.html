@@ -1,0 +1,25 @@
+<!-- <p>{{details | json}}</p> -->
+<button (click)="demo()" class="btn btn-primary">Show Data</button>
+<div class="table-container">
+    <table *ngIf="showTableData" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let _details of details">
+                <td>{{_details.SNo}}</td>
+                <td>{{_details.Name}}</td>
+                <td>{{_details.Mobile}}</td>
+                <td>{{_details.Email}}</td>
+            </tr>            
+        </tbody>
+    </table>
+</div>
+
+<app-home-child [getCarDetails]="carDetails"></app-home-child>
+

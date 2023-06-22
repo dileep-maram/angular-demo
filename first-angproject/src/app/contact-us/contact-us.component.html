@@ -1,0 +1,23 @@
+<!-- <p [ngClass]="paragraphColor ? 'true-class' : 'false-class' ">contact-us works!</p> -->
+<!-- <input type="text" [ngclass]="inputColor ? 'true-class' : 'false-class' " /> -->
+<button (click)="fetchBooksApi()" class="btn btn-primary">GetAPI</button>
+<div class="mt-2" *ngIf="showBooksTable">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>userId</th>
+                <th>body</th>
+                <th>id</th>
+                <th>title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let _booksData of booksData">
+                <td>{{_booksData.userId}}</td>
+                <td>{{_booksData.body}}</td>
+                <td>{{_booksData.id}}</td>
+                <td>{{_booksData.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
